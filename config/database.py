@@ -2,7 +2,8 @@ import psycopg2
 import os
 
 class Database:
-    DB_URL = "postgresql://neondb_owner:npg_eN7nlEPOZg8Q@ep-delicate-frog-ax9ah5k2-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+    # 🎯 تم الاحتفاظ بنص الرابط المنسوخ مع حذف &channel_binding=require فقط
+    DB_URL = "postgresql://neondb_owner:npg_eN7nlEPOZg8Q@ep-delicate-frog-ax9ah5k2-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require"
 
     @classmethod
     def initialize(cls):
