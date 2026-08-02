@@ -1,9 +1,9 @@
 import psycopg2
-import os
+import streamlit as st
 
 class Database:
-    # 🎯 تم الاحتفاظ بنص الرابط المنسوخ مع حذف &channel_binding=require فقط
-    DB_URL = "postgresql://neondb_owner:npg_eN7nlEPOZg8Q@ep-delicate-frog-ax9ah5k2-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require"
+    # يقرأ الرابط بأمان من Streamlit Secrets
+    DB_URL = st.secrets.get("DATABASE_URL", "postgresql://neondb_owner:npg_SIxUP7g6vbHt@ep-delicate-frog-ax9ah5k2.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require")
 
     @classmethod
     def initialize(cls):
